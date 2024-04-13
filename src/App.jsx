@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import { fetchDataFromApi } from "./utilitiy/api";
 
 function App() {
-  return (
-    <div>App</div>
-  )
+    useEffect(() => {
+        apiTesting();
+    },[])
+    const apiTesting = () => {
+      fetchDataFromApi('/movie/top_rated').then((data)=>{
+        console.log(data);
+      })
+    }
+  return 
+  <>
+    
+  </>;
 }
 
-export default App
+export default App;
