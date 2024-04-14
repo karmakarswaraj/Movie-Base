@@ -3,19 +3,19 @@ import { createSlice } from "@reduxjs/toolkit";
 const homeSlice = createSlice({
     name: "home",
     initialState: {
-        url: {},
-        genres:{}
+        url: "", // Initialize as empty string or appropriate initial value
+        genres: [] // Initialize as empty array or appropriate initial value
     },
     reducers: {
         setUrl: (state, action) => {
-            state.url = action.payload
+            state.url = action.payload;
         },
         setGenres: (state, action) => {
-            state.upcoming = action.payload
+            state.genres = action.payload;
         }
     }
-})
+});
 
-export default homeSlice.reducer
+export default homeSlice.reducer;
 
-export const { setUrl, setGenres } = homeSlice.actions
+export const { setUrl, setGenres } = homeSlice.actions;
