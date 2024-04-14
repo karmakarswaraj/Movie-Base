@@ -9,7 +9,6 @@ import Explore from "./pages/explore/Explore";
 import PageNotFound from "./pages/404/PageNotFound";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
-import "./App.css";
 function App() {
   const dispatch = useDispatch();
   const url = useSelector((state) => state.home.url);
@@ -37,14 +36,14 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:mediaType/:id" element={<Details />} />
         <Route path="/explore/:mediaType" element={<Explore />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }
