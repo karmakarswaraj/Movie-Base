@@ -20,11 +20,11 @@ function HeroBanner() {
     }
   };
 
-  // const handleSearchButtonClick = () => {
-  //   if (query.length > 0) {
-  //     navigate(`/search/${query}`);
-  //   }
-  // };
+  const handleSearchButtonClick = () => {
+    if (query.length > 0) {
+      navigate(`/search/${query}`);
+    }
+  };
 
   useEffect(() => {
     if (data && data.results.length > 0) {
@@ -35,33 +35,34 @@ function HeroBanner() {
 
   return (
     <div className="heroBanner">
-  {!loading && (
-    <div className="backdrop-img">
-      <Img src={bg} />
+      {!loading && (
+        <div className="backdrop-img">
+          <Img src={bg} />
+        </div>
+      )}
+
+      <div className="opacity-layer"></div>
+
+      <ContentWrapper>
+        <div className="heroBannerContent">
+          <span className="title">Welcome</span>
+          <br />
+          <span className="subTitle">
+            Millions of movies, TV shows, and people to discover. Explore now.
+          </span>
+          <div className="searchInput">
+            <input
+              type="text"
+              placeholder="Search for a movie or TV show...."
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              onKeyUp={handleSearch}
+            />
+            <button onClick={handleSearchButtonClick}>Search</button>
+          </div>
+        </div>
+      </ContentWrapper>
     </div>
-  )}
-
-  <div className="opacity-layer"></div>
-
-  <ContentWrapper>
-    <div className="heroBannerContent">
-      <span className="title">Welcome</span>
-      <br />
-      <span className="subTitle">Millions of movies, TV shows, and people to discover. Explore now.</span>
-      <div className="searchInput">
-        <input
-          type="text"
-          placeholder="Search for a movie or TV show...."
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          onKeyUp={handleSearch}
-        />
-        <button >Search</button>
-      </div>
-    </div>
-  </ContentWrapper>
-</div>
-
   );
 }
 
