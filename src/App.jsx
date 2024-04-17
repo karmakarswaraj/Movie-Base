@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { fetchDataFromApi } from "./utilitiy/api";
 import { useSelector, useDispatch } from "react-redux";
-import { setUrl } from "./store/homeSlice";
+import { setUrl, setGenres } from "./store/homeSlice";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Details from "./pages/details/Details";
@@ -15,12 +15,12 @@ function App() {
 
   useEffect(() => {
     fetchApiConfig();
-  }, []); // Empty dependency array since fetchApiConfig doesn't depend on any props or state
+    genresCall();
+  }, []); 
 
   const fetchApiConfig = () => {
     fetchDataFromApi("/configuration")
       .then((data) => {
-        // Assuming data.images.secure_base_url exists and contains the base URL for images
         const url = {
           backdrop: data.images.secure_base_url + "original",
           poster: data.images.secure_base_url + "original",
@@ -29,9 +29,23 @@ function App() {
         dispatch(setUrl(url));
       })
       .catch((error) => {
-        // Handle API request errors gracefully
         console.error("Error fetching API configuration:", error);
       });
+  };
+
+  const genresCall = async () => {
+    let promises = [];
+    let endPoints = ["tv", "movie"];
+    let allGenres = {};
+
+    endPoints.forEach((url) => {
+      promises.push(fetchDataFromApi(`/genre/${url}/list`));
+    });
+    const data = await Promise.all(promises);
+    data.map(({ genres }) => {
+      return genres.map((item) => (allGenres[item.id] = item));
+    });
+    dispatch(setGenres(allGenres));
   };
 
   return (

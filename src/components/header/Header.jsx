@@ -5,7 +5,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 import "./header.scss";
 
-import ContentWrapper from "../contentWrapper/contentWrapper";
+import ContentWrapper from "../contentWrapper/ContentWrapper";
 import logo from "../../assets/movieBase-logo.png";
 
 const Header = () => {

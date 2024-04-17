@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const homeSlice = createSlice({
     name: "home",
     initialState: {
-        url: "", // Initialize as empty string or appropriate initial value
-        genres: [] // Initialize as empty array or appropriate initial value
+        url: "", 
+        genres: [] 
     },
     reducers: {
         setUrl: (state, action) => {
