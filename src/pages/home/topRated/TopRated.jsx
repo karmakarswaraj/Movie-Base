@@ -15,11 +15,22 @@ const TopRated = () => {
     return (
         <div className="carouselSection">
             <ContentWrapper>
-                <span className="carouselTitle">Top Rated</span>
+            <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            fontSize: "x-large",
+            marginLeft: "30px",
+            marginRight: "30px",
+            marginBottom: "20px",
+          }}
+        >
+                <span className="carouselTitle" style={{color:"white"}}>Top Rated</span>
                 <SwitchTabs
                     data={["Movies", "TV"]}
                     onTabChange={onTabChange}
                 />
+                </div>
             </ContentWrapper>
             <Carousel
                 data={data?.results}
