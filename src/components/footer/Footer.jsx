@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
-import ContentWrapper from "../contentWrapper/ContentWrapper.jsx";
+import ContentWrapper from "../../Index";
 
 import "./style.scss";
 
