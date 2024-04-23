@@ -17,7 +17,7 @@ const Trending = () => {
 
   return (
     <div className="carouselSection">
-      <ContentWrapper>
+      <div className="ContentWrapper">
         <div
           style={{
             display: "flex",
@@ -33,7 +33,7 @@ const Trending = () => {
           </span>
           <SwitchTabs data={["Day", "Week"]} onTabChange={onTabChange} />
         </div>
-      </ContentWrapper>
+      </div>
       <Carousel data={data?.results} loading={loading} />
     </div>
   );

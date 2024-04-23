@@ -72,7 +72,7 @@ const Header = () => {
 
   return (
     <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`} >
-      <ContentWrapper>
+      <div className="ContentWrapper">
         <div
           className="logo"
           onClick={() => navigate("/")}
@@ -111,10 +111,10 @@ const Header = () => {
             <SlMenu onClick={openMobileMenu} />
           )}
         </div>
-      </ContentWrapper>
+      </div>
       {showSearch && (
         <div className="searchBar">
-          <ContentWrapper>
+          <div className="ContentWrapper">
             <div className="searchInput">
               <input
                 type="text"
@@ -124,7 +124,7 @@ const Header = () => {
               />
               <VscChromeClose onClick={() => setShowSearch(false)} />
             </div>
-          </ContentWrapper>
+          </div>
         </div>
       )}
     </header>

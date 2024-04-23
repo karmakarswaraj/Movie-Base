@@ -13,8 +13,8 @@ const TopRated = () => {
     };
 
     return (
-        <div className="carouselSection">
-            <ContentWrapper>
+        <div className="ContentWrapper">
+            <div className="pageNotFound">
             <div
           style={{
             display: "flex",
@@ -31,7 +31,7 @@ const TopRated = () => {
                     onTabChange={onTabChange}
                 />
                 </div>
-            </ContentWrapper>
+            </div>
             <Carousel
                 data={data?.results}
                 loading={loading}

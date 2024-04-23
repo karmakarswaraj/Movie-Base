@@ -42,7 +42,7 @@ const Cast = ({ data, loading }) => {
 
   return (
     <div className="castSection">
-      <ContentWrapper>
+      <div className="ContentWrapper">
         <div className="sectionHeading">Top Cast</div>
         <div
           className="listItems"
@@ -74,7 +74,7 @@ const Cast = ({ data, loading }) => {
             </>
           )}
         </div>
-      </ContentWrapper>
+      </div>
     </div>
   );
 };

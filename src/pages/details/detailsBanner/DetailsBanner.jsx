@@ -46,7 +46,7 @@ const DetailsBanner = ({ video, crew }) => {
                 <Img src={url.backdrop + data.backdrop_path} />
               </div>
               <div className="opacity-layer"></div>
-              <ContentWrapper>
+              <div className="ContentWrapper">
                 <div className="content">
                   <div className="left">
                     {data.poster_path ? (
@@ -161,13 +161,13 @@ const DetailsBanner = ({ video, crew }) => {
                   videoId={videoId}
                   setVideoId={setVideoId}
                 />
-              </ContentWrapper>
+              </div>
             </React.Fragment>
           )}
         </>
       ) : (
         <div className="detailsBannerSkeleton">
-          <ContentWrapper>
+          <div className="ContentWrapper">
             <div className="left skeleton"></div>
             <div className="right">
               <div className="row skeleton"></div>
@@ -178,7 +178,7 @@ const DetailsBanner = ({ video, crew }) => {
               <div className="row skeleton"></div>
               <div className="row skeleton"></div>
             </div>
-          </ContentWrapper>
+          </div>
         </div>
       )}
     </div>

@@ -52,7 +52,7 @@ const SearchResult = () => {
         <div className="searchResultsPage">
             {loading && <Spinner initial={true} />}
             {!loading && (
-                <ContentWrapper>
+                <div className="ContentWrapper">
                     {data?.results?.length > 0 ? (
                         <>
                             <div className="pageTitle">
@@ -86,7 +86,7 @@ const SearchResult = () => {
                             Sorry, Results not found!
                         </span>
                     )}
-                </ContentWrapper>
+                </div>
             )}
         </div>
     );

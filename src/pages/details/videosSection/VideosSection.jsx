@@ -44,7 +44,7 @@ const VideosSection = ({ data, loading }) => {
 
   return (
     <div className="videosSection">
-      <ContentWrapper>
+      <div className="ContentWrapper">
         <div className="sectionHeading">Official Videos</div>
 
         <div
@@ -83,7 +83,7 @@ const VideosSection = ({ data, loading }) => {
             </>
           )}
         </div>
-      </ContentWrapper>
+      </div>
       <VideoPopup show={show} setShow={setShow} videoId={videoId} setVideoId={setVideoId} />
     </div>
   );

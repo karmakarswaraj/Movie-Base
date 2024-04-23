@@ -8,7 +8,7 @@ import "./style.scss";
 const Footer = () => {
   return (
     <footer className="footer">
-      <ContentWrapper>
+      <div className="ContentWrapper">
         <ul className="menuItems">
           <li className="menuItem">Terms Of Use</li>
           <li className="menuItem">Privacy-Policy</li>
@@ -62,7 +62,7 @@ const Footer = () => {
             <FaInstagram />
           </span>
         </div>
-      </ContentWrapper>
+      </div>
     </footer>
   );
 };

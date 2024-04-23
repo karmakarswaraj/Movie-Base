@@ -48,7 +48,7 @@ const Carousel = ({ data, loading, endpoint, title }) => {
 
     return (
         <div className="carousel">
-            <ContentWrapper>
+            <div className="ContentWrapper">
                 {title && <div className="carouselTitle" >{title}</div>}
                 <BsFillArrowLeftCircleFill
                     className="carouselLeftNav arrow"
@@ -110,7 +110,7 @@ const Carousel = ({ data, loading, endpoint, title }) => {
                         {skItem()}
                     </div>
                 )}
-            </ContentWrapper>
+            </div>
         </div>
     );
 };

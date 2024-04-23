@@ -14,7 +14,7 @@ const Popular = () => {
 
   return (
     <div className="carouselSection">
-      <ContentWrapper>
+      <div className="contentWrapper ">
         <div
           style={{
             display: "flex",
@@ -30,7 +30,7 @@ const Popular = () => {
           </span>
           <SwitchTabs data={["Movies", "TV"]} onTabChange={onTabChange} />
         </div>
-      </ContentWrapper>
+      </div>
       <Carousel data={data?.results} loading={loading} endpoint={endpoint} />
     </div>
   );

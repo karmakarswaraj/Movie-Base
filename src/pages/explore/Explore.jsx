@@ -98,7 +98,7 @@ const Explore = () => {
 
     return (
         <div className="explorePage">
-            <ContentWrapper>
+            <div className="contentWrapper ">
                 <div className="pageHeader">
                     <div className="pageTitle">
                         {mediaType === "tv"
@@ -160,7 +160,7 @@ const Explore = () => {
                         )}
                     </>
                 )}
-            </ContentWrapper>
+            </div>
         </div>
     );
 };

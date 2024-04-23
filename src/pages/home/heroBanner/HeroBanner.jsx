@@ -43,7 +43,7 @@ function HeroBanner() {
 
       <div className="opacity-layer"></div>
 
-      <ContentWrapper>
+      <div className="ContentWrapper">
         <div className="heroBannerContent">
           <span className="title">Welcome</span>
           <br />
@@ -62,7 +62,7 @@ function HeroBanner() {
             <button onClick={handleSearchButtonClick}>Search</button>
           </div>
         </div>
-      </ContentWrapper>
+      </div>
     </div>
   );
 }
