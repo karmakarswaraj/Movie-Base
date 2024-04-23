@@ -8,8 +8,8 @@ $pink: #ff007f;
     width: 100%;
     height: 60px;
     z-index: 1;
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
     transition: all ease 0.5s;
     z-index: 2;
 
@@ -27,7 +27,7 @@ $pink: #ff007f;
         transform: translateY(-60px);
     }
 
-    .contentWrapper {
+    .ContentWrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
