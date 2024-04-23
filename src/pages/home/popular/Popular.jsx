@@ -13,7 +13,7 @@ const Popular = () => {
 
   return (
     <div className="carouselSection">
-      <div className="contentWrapper ">
+      <div className="ContentWrapper ">
         <div
           style={{
             display: "flex",

@@ -9,7 +9,7 @@ const Recommendation = ({ mediaType, id }) => {
     );
 
     return (
-        <div className="RecommandContainer" style={{ marginLeft: "30px", marginRight: "30px" }}>
+        <div className="Recommand Container" style={{ marginLeft: "30px", marginRight: "30px" }}>
            <Carousel
             title="Recommendations"
             data={data?.results}
