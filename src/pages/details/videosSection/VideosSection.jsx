@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./videosSection.scss";
 import { PlayIcon } from "../Playbtn";
-import ContentWrapper from "../../../Index";
 import VideoPopup from "../../../components/videoPopup/VideoPopup";
 import Img from "../../../components/lazyLoader/Img";
 
