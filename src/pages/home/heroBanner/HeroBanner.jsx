@@ -47,8 +47,7 @@ function HeroBanner() {
           <span className="title">Welcome</span>
           <br />
           <span className="subTitle">
-            Millions of movies, TV shows, and people to discover.
-            Explore now.
+            Millions of movies, TV shows, and people to discover. Explore now.
           </span>
           <div className="searchInput">
             <input

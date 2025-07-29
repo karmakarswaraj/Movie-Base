@@ -4,5 +4,5 @@ import homeReducer from "./homeSlice";
 export const store = configureStore({
     reducer: {
         home: homeReducer
-    }
+    },
 });
